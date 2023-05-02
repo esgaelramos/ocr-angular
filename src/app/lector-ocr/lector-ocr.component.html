@@ -1,0 +1,8 @@
+<!-- Lector-ocr.component.html -->
+<h1>OCR en Angular</h1>
+<input type="file" accept="image/*" (change)="cargarImagen($event)" #inputFile>
+<button (click)="inputFile.click()">Subir imagen</button>
+<button (click)="abrirCamara()">Usar cámara</button>
+<button (click)="realizarOCR()">Realizar OCR</button>
+<progress id="ocrProgress" [value]="ocrProgreso" max="100"></progress>
+<p *ngIf="textoExtraido">Texto extraído: {{textoExtraido}}</p>
